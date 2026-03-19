@@ -1,6 +1,6 @@
 # ralph-t
 
-`ralph-t` is an experiment repo for building a service in `ralphthon` using a `Ralph-loop` harness driven by coding agents. This README documents the development method and operating loop. It does not describe the product itself in depth.
+`ralph-t` is an experiment repo for building a service with a `Ralph-loop` harness driven by coding agents. This README documents the development method and operating loop. It does not describe the product itself in depth.
 
 ## Separation Of Concerns
 
@@ -10,8 +10,6 @@
 - `Ralph-loop`
   - The development method used to build the service.
   - Task framing, agent execution, verification, logging, and iteration rules belong in the harness.
-- `ralphthon`
-  - The runtime context where the coding-agent loop is executed.
 
 These are different layers and should not be mixed in the same document or workflow rule.
 
@@ -56,7 +54,7 @@ The key rule is simple: product intent lives in `guides/`, while loop execution 
    - Pick one bounded task from the current product direction.
    - Write acceptance criteria and constraints in a machine-usable form.
 2. `agent run`
-   - Run the coding agent in `ralphthon` against that task.
+   - Run the coding agent against that task.
    - Require code changes, not just analysis.
 3. `verification`
    - Run tests, lint checks, smoke checks, or structured evals.
